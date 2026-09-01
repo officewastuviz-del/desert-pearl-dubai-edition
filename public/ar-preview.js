@@ -9,11 +9,19 @@
   const phone=document.querySelector("[data-phone]");
   const label=document.querySelector("[data-placement-label]");
   const trigger=document.querySelector("[data-place-trigger]");
+  const video=document.querySelector("[data-ar-video]");
   let placed=false;
   trigger?.addEventListener("click",()=>{
     placed=!placed;
     phone?.classList.toggle("is-placed",placed);
-    if(label)label.textContent=placed?"PROPERTY PLACED · DRAG TO EXPLORE":"FINDING A SURFACE";
+    if(label)label.textContent=placed?"AR EXPERIENCE ACTIVE":"FINDING A SURFACE";
     if(trigger)trigger.querySelector("span").textContent=placed?"Reset placement":"Simulate placement";
+    if(placed){
+      if(video)video.currentTime=0;
+      video?.play().catch(()=>{});
+    }else{
+      video?.pause();
+      if(video)video.currentTime=0;
+    }
   });
 })();

@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_VERSION = "dubai-edition-property-shell-v5";
+const CACHE_VERSION = "dubai-edition-property-shell-v6";
 const CORE_ASSETS = [
   "./index.html",
   "./vision.html",
@@ -16,12 +16,13 @@ const CORE_ASSETS = [
   "./tour-360.css?v=2.0.1",
   "./tour-360.js?v=2.1.0",
   "./ar.html",
-  "./ar-preview.css?v=1.0.0",
-  "./ar-preview.js?v=1.0.0",
+  "./ar-preview.css?v=2.0.0",
+  "./ar-preview.js?v=2.0.0",
   "./manifest.webmanifest?v=2.0.0",
   "./config/property-config.js",
   "./media/images/property-logo.svg",
   "./media/images/dubai/01-exterior-aerial-golden-hour.png",
+  "./media/images/dubai/ar-video-cover.jpg",
   "./media/music/ambient.m4a"
 ];
 
