@@ -1,0 +1,21 @@
+.ambient-sound { position:fixed; right:max(18px,env(safe-area-inset-right)); bottom:max(18px,env(safe-area-inset-bottom)); z-index:40; }
+.ambient-toggle { min-height:40px; display:flex; align-items:center; gap:10px; border:1px solid rgba(255,255,255,.28); padding:0 13px; background:rgba(12,16,14,.48); color:#fff; box-shadow:0 10px 34px rgba(0,0,0,.18); backdrop-filter:blur(15px); -webkit-backdrop-filter:blur(15px); cursor:pointer; transition:border-color .35s,background .35s,transform .35s cubic-bezier(.22,1,.36,1); }
+.ambient-toggle:hover { transform:translateY(-2px); border-color:#b08a57; background:rgba(12,16,14,.68); }
+.ambient-toggle:focus-visible { outline:1px solid #b08a57; outline-offset:3px; }
+.ambient-bars { width:18px; height:13px; display:flex; align-items:flex-end; justify-content:center; gap:2px; }
+.ambient-bars i { display:block; width:2px; height:4px; background:#b08a57; transform-origin:bottom; }
+.ambient-toggle.is-playing .ambient-bars i:nth-child(1) { animation:ambientBar .8s ease-in-out infinite alternate; }
+.ambient-toggle.is-playing .ambient-bars i:nth-child(2) { animation:ambientBar .62s .15s ease-in-out infinite alternate; }
+.ambient-toggle.is-playing .ambient-bars i:nth-child(3) { animation:ambientBar .95s .08s ease-in-out infinite alternate; }
+.ambient-toggle.is-playing .ambient-bars i:nth-child(4) { animation:ambientBar .7s .22s ease-in-out infinite alternate; }
+.ambient-label { font:600 7px/1 Inter,"Segoe UI",Arial,sans-serif; letter-spacing:.17em; text-transform:uppercase; }
+.ar-page .ambient-sound { bottom:max(104px,calc(env(safe-area-inset-bottom) + 96px)); }
+.tour-page .ambient-sound { bottom:max(136px,calc(env(safe-area-inset-bottom) + 128px)); }
+@keyframes ambientBar { to { height:13px; opacity:.95; } }
+@media(max-width:760px){
+  .ambient-sound { right:max(10px,env(safe-area-inset-right)); bottom:max(10px,env(safe-area-inset-bottom)); }
+  .ambient-toggle { min-height:36px; padding:0 10px; }.ambient-label{font-size:6px}
+  .ar-page .ambient-sound { bottom:max(96px,calc(env(safe-area-inset-bottom) + 88px)); }
+  .tour-page .ambient-sound { bottom:max(104px,calc(env(safe-area-inset-bottom) + 96px)); }
+}
+@media(prefers-reduced-motion:reduce){.ambient-bars i{animation:none!important}}

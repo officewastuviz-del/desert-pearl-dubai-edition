@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title">
+  <title id="title">Desert Pearl Residences</title>
+  <circle cx="48" cy="48" r="43" fill="none" stroke="#B08A57" stroke-width="1.5"/>
+  <circle cx="48" cy="32" r="8" fill="#B08A57"/>
+  <path d="M23 65c8-15 16-22 25-22s17 7 25 22" fill="none" stroke="#B08A57" stroke-width="2.2" stroke-linecap="round"/>
+  <path d="M31 66c5-9 11-14 17-14s12 5 17 14" fill="none" stroke="#66705A" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

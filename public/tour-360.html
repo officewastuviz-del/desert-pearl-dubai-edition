@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#101513">
+  <meta name="description" content="Interactive 17-scene 8K virtual property tour of Desert Pearl Residences">
+  <title>360° VR Tour | Desert Pearl Residences</title>
+  <link rel="icon" type="image/svg+xml" href="media/images/property-logo.svg">
+  <link rel="stylesheet" href="tour-360.css?v=2.0.1">
+  <link rel="stylesheet" href="ambient-audio.css?v=1.0.0">
+  <script src="config/property-config.js"></script>
+  <script src="tour-360.js?v=2.1.0" defer></script>
+  <script src="ambient-audio.js?v=1.0.0" defer></script>
+</head>
+<body class="tour-page">
+  <main class="tour-shell" data-tour-shell>
+    <header class="tour-header">
+      <a class="tour-brand" href="experience.html">
+        <img data-property-logo src="media/images/property-logo.svg" alt="">
+        <span><strong data-property-name>Desert Pearl Residences</strong><small>8K · 360° VR Journey</small></span>
+      </a>
+      <div class="tour-status"><i></i><span data-tour-progress>Scene 01 of 17</span></div>
+      <div class="header-actions">
+        <button class="text-button" type="button" data-open-scenes aria-expanded="false">Scene menu</button>
+        <button class="text-button" type="button" data-fullscreen>Fullscreen</button>
+      </div>
+    </header>
+
+    <section class="panorama" data-panorama tabindex="0" aria-label="Drag, swipe or use the arrow keys to look around the 360 degree scene">
+      <canvas class="vr-canvas" data-vr-canvas></canvas>
+      <div class="panorama-shade"></div>
+      <div class="loading-screen" data-loading><span></span><b>Loading 8K panorama</b><small data-loading-label>Grand Arrival</small></div>
+      <div class="drag-hint" data-drag-hint><span><i></i></span><b>Drag to look around</b><small>Tap a hotspot to continue</small></div>
+      <div class="hotspot-layer" data-hotspot-layer aria-live="polite"></div>
+      <div class="scene-copy">
+        <p><span data-scene-index>01</span> · <span data-scene-zone>Arrival</span></p>
+        <h1 data-scene-title>Grand Arrival</h1>
+        <span data-scene-description>Begin at the illuminated waterfront arrival court.</span>
+      </div>
+      <div class="view-controls" aria-label="View controls">
+        <button type="button" data-zoom-in aria-label="Zoom in">+</button>
+        <button type="button" data-zoom-out aria-label="Zoom out">−</button>
+        <button type="button" data-reset-view aria-label="Reset view">⌾</button>
+      </div>
+      <div class="compass"><span>N</span><i data-compass></i></div>
+    </section>
+
+    <aside class="scene-drawer" data-scene-drawer aria-label="Tour scene menu">
+      <div class="drawer-heading"><div><p>Desert Pearl journey</p><h2>17 immersive scenes</h2></div><button type="button" data-close-scenes aria-label="Close scene menu">×</button></div>
+      <div class="scene-list" data-scene-list></div>
+    </aside>
+
+    <nav class="tour-footer" aria-label="Tour navigation">
+      <button class="step-button" type="button" data-previous-scene><i>←</i><span><small>Previous</small><b data-previous-label>Private Spa</b></span></button>
+      <div class="tour-sequence"><div data-sequence-dots></div><span data-sequence-label>Arrival · Scene 01</span></div>
+      <button class="step-button next" type="button" data-next-scene><span><small>Next</small><b data-next-label>Arrival Passage</b></span><i>→</i></button>
+    </nav>
+  </main>
+</body>
+</html>

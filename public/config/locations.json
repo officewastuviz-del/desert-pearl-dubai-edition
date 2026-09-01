@@ -1,0 +1,804 @@
+﻿{
+    "version":  1,
+    "adminPin":  "",
+    "adminMode":  false,
+    "project":  {
+                    "name":  "Bramhand One"
+                },
+    "analytics":  {
+                      "measurementId":  "G-95HWWHECWJ",
+                      "reportingUrl":  "",
+                      "reportingMode":  "setup-required",
+                      "posthog":  {
+                                      "apiKey":  "",
+                                      "host":  "https://us.i.posthog.com",
+                                      "defaults":  "2026-05-30",
+                                      "autocapture":  false,
+                                      "capturePageview":  true,
+                                      "sessionReplay":  false
+                                  },
+                      "winEventEndpoint":  "win-event.php",
+                      "deploymentId":  "bramhand_one_dhayari_pr1260002600301",
+                      "reraId":  "PR1260002600301"
+                  },
+    "navigation":  [
+                       {
+                           "id":  "location",
+                           "label":  "Location",
+                           "children":  [
+                                            {
+                                                "label":  "Dhayari Phata to Bramhand One",
+                                                "type":  "video",
+                                                "locationId":  "location-video"
+                                            },
+                                            {
+                                                "label":  "Google Map Route",
+                                                "type":  "map",
+                                                "routeLabel":  "Dhayari Phata to Bramhand One via Shree Ganpati Jewellers",
+                                                "embedUrl":  "https://maps.app.goo.gl/wtUVp23oguPM7u1E9",
+                                                "openUrl":  "https://maps.app.goo.gl/wtUVp23oguPM7u1E9"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "flat-options",
+                           "label":  "Flat Options",
+                           "children":  [
+                                            {
+                                                "label":  "1 BHK",
+                                                "type":  "video",
+                                                "locationId":  "one-bhk"
+                                            },
+                                            {
+                                                "label":  "2 BHK",
+                                                "type":  "video",
+                                                "locationId":  "two-bhk"
+                                            },
+                                            {
+                                                "label":  "Floor Plate",
+                                                "type":  "link",
+                                                "href":  "media/documents/floor-plate.pdf",
+                                                "target":  "_blank"
+                                            },
+                                            {
+                                                "label":  "1 BHK Layout",
+                                                "type":  "link",
+                                                "href":  "media/documents/1-bhk-layout.pdf",
+                                                "target":  "_blank"
+                                            },
+                                            {
+                                                "label":  "2 BHK Layout",
+                                                "type":  "link",
+                                                "href":  "media/documents/2-bhk-layout.pdf",
+                                                "target":  "_blank"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "amenities",
+                           "label":  "Amenities",
+                           "children":  [
+                                            {
+                                                "label":  "Social",
+                                                "type":  "video",
+                                                "locationId":  "amenity-social",
+                                                "detail":  [
+                                                               "Seating Area",
+                                                               "Club House",
+                                                               "Game Zone with Chitchat Area",
+                                                               "Party Lawn",
+                                                               "BBQ Counter",
+                                                               "Senior Citizen Seating"
+                                                           ]
+                                            },
+                                            {
+                                                "label":  "Kids",
+                                                "type":  "video",
+                                                "locationId":  "amenity-kids",
+                                                "detail":  [
+                                                               "Childrens Play Area",
+                                                               "Game Zone",
+                                                               "Feature Wall for Children"
+                                                           ]
+                                            },
+                                            {
+                                                "label":  "Leisure",
+                                                "type":  "video",
+                                                "locationId":  "amenity-leisure",
+                                                "detail":  [
+                                                               "Pergola",
+                                                               "Star Gazing Area",
+                                                               "Gazebo With Seating"
+                                                           ]
+                                            },
+                                            {
+                                                "label":  "Health",
+                                                "type":  "video",
+                                                "locationId":  "amenity-health",
+                                                "detail":  [
+                                                               "Jogging Track",
+                                                               "Open Gym",
+                                                               "Accupressure Pathway",
+                                                               "Meditation Area",
+                                                               "Stepping Stone"
+                                                           ]
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "ar",
+                           "label":  "AR",
+                           "children":  [
+                                            {
+                                                "label":  "Facade",
+                                                "type":  "link",
+                                                "href":  "ar.php",
+                                                "target":  "_self"
+                                            },
+                                            {
+                                                "label":  "Location",
+                                                "type":  "link",
+                                                "href":  "ar.php?model=location",
+                                                "target":  "_self"
+                                            }
+                                        ]
+                       },
+                       {
+                           "id":  "brochure-reader",
+                           "label":  "Brochure",
+                           "type":  "brochure"
+                       }
+                   ],
+    "locations":  [
+                      {
+                          "id":  "location-video",
+                          "name":  "Dhayari Phata to Bramhand One",
+                          "aliases":  [
+                                          "location",
+                                          "dhayari phata",
+                                          "bramhand one",
+                                          "site route"
+                                      ],
+                          "videoUrl":  "media/videos/location-dhayari-route.mp4",
+                          "narrationUrl":  "media/narration/location-silent.m4a",
+                          "plan":  {
+                                       "enabled":  false,
+                                       "reason":  "Location route video does not use a plan overlay."
+                                   },
+                          "narrationStart":  0,
+                          "narrationEnd":  62,
+                          "group":  "location",
+                          "chapterTitle":  "Finding Best Commute for you.."
+                      },
+                      {
+                          "id":  "one-bhk",
+                          "name":  "1 BHK",
+                          "aliases":  [
+                                          "homes",
+                                          "1 bhk",
+                                          "one bhk",
+                                          "flat options"
+                                      ],
+                          "videoUrl":  "media/videos/1-bhk.mp4",
+                          "plan":  {
+                                       "enabled":  false,
+                                       "reason":  "Plan appears only when media/plans/one-bhk-plan is supplied and configured."
+                                   },
+                          "narrationStart":  0,
+                          "narrationEnd":  30,
+                          "group":  "flat-options"
+                      },
+                      {
+                          "id":  "two-bhk",
+                          "name":  "2 BHK",
+                          "aliases":  [
+                                          "homes",
+                                          "2 bhk",
+                                          "two bhk",
+                                          "flat options"
+                                      ],
+                          "videoUrl":  "media/videos/2-bhk.mp4",
+                          "plan":  {
+                                       "enabled":  false,
+                                       "reason":  "Plan appears only when media/plans/two-bhk-plan is supplied and configured."
+                                   },
+                          "narrationStart":  0,
+                          "narrationEnd":  30,
+                          "group":  "flat-options"
+                      },
+                      {
+                          "id":  "amenity-social",
+                          "name":  "Social",
+                          "aliases":  [
+                                          "seating area",
+                                          "club house",
+                                          "game zone with chitchat area",
+                                          "party lawn",
+                                          "bbq counter",
+                                          "senior citizen seating"
+                                      ],
+                          "videoUrl":  "media/videos/amenity-social.mp4",
+                          "plan":  {
+                                       "enabled":  false,
+                                       "reason":  "Plan appears only when media/plans/amenity-social-plan is supplied and configured."
+                                   },
+                          "narrationStart":  0,
+                          "narrationEnd":  30,
+                          "group":  "amenities",
+                          "chapterKicker":  "AMENITIES",
+                          "chapterTitle":  "Social",
+                          "chapterItems":  [
+                                               "Seating Area",
+                                               "Club House",
+                                               "Game Zone with Chitchat Area",
+                                               "Party Lawn",
+                                               "BBQ Counter",
+                                               "Senior Citizen Seating"
+                                           ]
+                      },
+                      {
+                          "id":  "amenity-kids",
+                          "name":  "Kids",
+                          "aliases":  [
+                                          "childrens play area",
+                                          "children play area",
+                                          "game zone",
+                                          "feature wall for children"
+                                      ],
+                          "videoUrl":  "media/videos/amenity-kids.mp4",
+                          "plan":  {
+                                       "enabled":  false,
+                                       "reason":  "Plan appears only when media/plans/amenity-kids-plan is supplied and configured."
+                                   },
+                          "narrationStart":  0,
+                          "narrationEnd":  30,
+                          "group":  "amenities",
+                          "chapterKicker":  "AMENITIES",
+                          "chapterTitle":  "Kids",
+                          "chapterItems":  [
+                                               "Childrens Play Area",
+                                               "Game Zone",
+                                               "Feature Wall for Children"
+                                           ]
+                      },
+                      {
+                          "id":  "amenity-leisure",
+                          "name":  "Leisure",
+                          "aliases":  [
+                                          "pergola",
+                                          "star gazing area",
+                                          "gazebo with seating"
+                                      ],
+                          "videoUrl":  "media/videos/amenity-leisure.mp4",
+                          "plan":  {
+                                       "enabled":  false,
+                                       "reason":  "Plan appears only when media/plans/amenity-leisure-plan is supplied and configured."
+                                   },
+                          "narrationStart":  0,
+                          "narrationEnd":  30,
+                          "group":  "amenities",
+                          "chapterKicker":  "AMENITIES",
+                          "chapterTitle":  "Leisure",
+                          "chapterItems":  [
+                                               "Pergola",
+                                               "Star Gazing Area",
+                                               "Gazebo With Seating"
+                                           ]
+                      },
+                      {
+                          "id":  "amenity-health",
+                          "name":  "Health",
+                          "aliases":  [
+                                          "jogging track",
+                                          "open gym",
+                                          "accupressure pathway",
+                                          "meditation area",
+                                          "stepping stone"
+                                      ],
+                          "videoUrl":  "media/videos/amenity-health.mp4",
+                          "plan":  {
+                                       "enabled":  false,
+                                       "reason":  "Plan appears only when media/plans/amenity-health-plan is supplied and configured."
+                                   },
+                          "narrationStart":  0,
+                          "narrationEnd":  30,
+                          "group":  "amenities",
+                          "chapterKicker":  "AMENITIES",
+                          "chapterTitle":  "Health",
+                          "chapterItems":  [
+                                               "Jogging Track",
+                                               "Open Gym",
+                                               "Accupressure Pathway",
+                                               "Meditation Area",
+                                               "Stepping Stone"
+                                           ]
+                      }
+                  ],
+    "cta":  {
+                "whatsappUrl":  "https://wa.me/919090309076?text=Hi%20Team%2C%20I%20am%20interested%20in%20Bramhand%20One.%20Please%20share%20the%20brochure%2C%20price%20details%2C%20floor%20plans%2C%20available%20offers%2C%20and%20help%20me%20schedule%20a%20site%20visit.",
+                "leadForm":  {
+                                 "enabled":  true,
+                                 "delaySeconds":  15,
+                                 "requiredFields":  [
+                                                        "name",
+                                                        "mobile"
+                                                    ],
+                                 "optionalFields":  [
+                                                        "email",
+                                                        "configuration",
+                                                        "preferredVisitDate",
+                                                        "source"
+                                                    ],
+                                 "validation":  {
+                                                    "mobileDigits":  10,
+                                                    "emailFormat":  true,
+                                                    "phoneCountry":  "IN",
+                                                    "emailDomainDns":  true,
+                                                    "blockDisposableEmail":  true,
+                                                    "otpVerification":  false
+                                                },
+                                 "captureEndpoint":  "lead-capture.php",
+                                 "storage":  "server-jsonl",
+                                 "recaptcha":  {
+                                                   "enabled":  false,
+                                                   "siteKey":  ""
+                                               },
+                                 "duplicateLeadDetection":  "crm",
+                                 "gateDownloadsExcept":  [
+
+                                                         ],
+                                 "firstRepeatSeconds":  45,
+                                 "repeatSeconds":  60,
+                                 "afterGuidedDelaySeconds":  15
+                             },
+                "callUrl":  "tel:+919090309076"
+            },
+    "brochure":  {
+                     "title":  "Read the Brochure",
+                     "originalPdf":  "media/documents/brochure.pdf",
+                     "compression":  {
+                                         "sourceBytes":  29793718,
+                                         "readerBytes":  1653022,
+                                         "format":  "webp-pages",
+                                         "fallbackPdfBytes":  2975491
+                                     },
+                     "pages":  [
+                                   {
+                                       "page":  1,
+                                       "section":  "Cover",
+                                       "src":  "media/brochure/pages/page-01.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  103670
+                                   },
+                                   {
+                                       "page":  2,
+                                       "section":  "Project Gallery",
+                                       "src":  "media/brochure/pages/page-02.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  199288
+                                   },
+                                   {
+                                       "page":  3,
+                                       "section":  "Residences",
+                                       "src":  "media/brochure/pages/page-03.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  85262
+                                   },
+                                   {
+                                       "page":  4,
+                                       "section":  "Home Design",
+                                       "src":  "media/brochure/pages/page-04.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  109376
+                                   },
+                                   {
+                                       "page":  5,
+                                       "section":  "Lifestyle Amenities",
+                                       "src":  "media/brochure/pages/page-05.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  125196
+                                   },
+                                   {
+                                       "page":  6,
+                                       "section":  "Location Advantage",
+                                       "src":  "media/brochure/pages/page-06.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  123600
+                                   },
+                                   {
+                                       "page":  7,
+                                       "section":  "Amenities Layout",
+                                       "src":  "media/brochure/pages/page-07.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  113302
+                                   },
+                                   {
+                                       "page":  8,
+                                       "section":  "Terrace Amenities",
+                                       "src":  "media/brochure/pages/page-08.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  187744
+                                   },
+                                   {
+                                       "page":  9,
+                                       "section":  "Location Map",
+                                       "src":  "media/brochure/pages/page-09.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  75016
+                                   },
+                                   {
+                                       "page":  10,
+                                       "section":  "Flat Options",
+                                       "src":  "media/brochure/pages/page-10.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  71890
+                                   },
+                                   {
+                                       "page":  11,
+                                       "section":  "Area Statement",
+                                       "src":  "media/brochure/pages/page-11.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  49432
+                                   },
+                                   {
+                                       "page":  12,
+                                       "section":  "Unit Plans",
+                                       "src":  "media/brochure/pages/page-12.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  56964
+                                   },
+                                   {
+                                       "page":  13,
+                                       "section":  "Planning Notes",
+                                       "src":  "media/brochure/pages/page-13.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  85402
+                                   },
+                                   {
+                                       "page":  14,
+                                       "section":  "Project Highlights",
+                                       "src":  "media/brochure/pages/page-14.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  62378
+                                   },
+                                   {
+                                       "page":  15,
+                                       "section":  "Why Bramhand One",
+                                       "src":  "media/brochure/pages/page-15.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  67070
+                                   },
+                                   {
+                                       "page":  16,
+                                       "section":  "Developer and RERA",
+                                       "src":  "media/brochure/pages/page-16.webp",
+                                       "width":  1076,
+                                       "height":  1521,
+                                       "bytes":  137432
+                                   }
+                               ],
+                     "chapters":  [
+                                      {
+                                          "title":  "Project Overview",
+                                          "page":  1,
+                                          "summary":  "Brand promise, lifestyle positioning, project introduction, Dhayari residential project."
+                                      },
+                                      {
+                                          "title":  "Project Gallery",
+                                          "page":  2,
+                                          "summary":  "Exterior imagery and first visual impression of Bramhand One."
+                                      },
+                                      {
+                                          "title":  "Residences",
+                                          "page":  3,
+                                          "summary":  "Spacious 1 BHK and 2 BHK homes, premium finishes, family living, inventory and project scale."
+                                      },
+                                      {
+                                          "title":  "Home Design",
+                                          "page":  4,
+                                          "summary":  "Vastu-aligned planning, modern comfort, ventilation, privacy, living experience."
+                                      },
+                                      {
+                                          "title":  "Lifestyle Amenities",
+                                          "page":  5,
+                                          "summary":  "Walking paths, green spaces, recreation, children, family-friendly lifestyle."
+                                      },
+                                      {
+                                          "title":  "Location Advantage",
+                                          "page":  6,
+                                          "summary":  "Dhayari location, green surroundings, Sinhagad Road, city access and peaceful living."
+                                      },
+                                      {
+                                          "title":  "Amenities Layout",
+                                          "page":  7,
+                                          "summary":  "Site plan, amenity layout, open spaces and project-level amenity placement."
+                                      },
+                                      {
+                                          "title":  "Terrace Amenities",
+                                          "page":  8,
+                                          "summary":  "Terrace amenities, open gym, jogging track, meditation, gazebo, seating and leisure."
+                                      },
+                                      {
+                                          "title":  "Location Map",
+                                          "page":  9,
+                                          "summary":  "Map, roads, nearby landmarks, schools, societies and project approach."
+                                      },
+                                      {
+                                          "title":  "Flat Options",
+                                          "page":  10,
+                                          "summary":  "1 BHK and 2 BHK options, unit mix, flat choices and home configurations."
+                                      },
+                                      {
+                                          "title":  "Area Statement",
+                                          "page":  11,
+                                          "summary":  "Carpet area, balcony, dry balcony, enclosed balcony and total carpet details."
+                                      },
+                                      {
+                                          "title":  "Unit Plans",
+                                          "page":  12,
+                                          "summary":  "1 BHK and 2 BHK layout plans, room arrangement and area statement."
+                                      },
+                                      {
+                                          "title":  "Planning Notes",
+                                          "page":  13,
+                                          "summary":  "Technical planning page, drawings, layout references and plan notes."
+                                      },
+                                      {
+                                          "title":  "Project Highlights",
+                                          "page":  14,
+                                          "summary":  "Project scale, exclusive inventory, green spaces, practical highlights and value points."
+                                      },
+                                      {
+                                          "title":  "Why Bramhand One",
+                                          "page":  15,
+                                          "summary":  "Reasons to choose the project, family safety, schools, children spaces and community living."
+                                      },
+                                      {
+                                          "title":  "Developer and RERA",
+                                          "page":  16,
+                                          "summary":  "Developer, strategic partner, project details, MahaRERA number PR1260002600301 and QR."
+                                      }
+                                  ],
+                     "searchIndex":  [
+                                         {
+                                             "page":  1,
+                                             "section":  "Project Overview",
+                                             "summary":  "Brand promise, lifestyle positioning, project introduction, Dhayari residential project.",
+                                             "keywords":  [
+                                                              "overview",
+                                                              "cover",
+                                                              "lifestyle",
+                                                              "luxury",
+                                                              "bramhand one",
+                                                              "dhayari",
+                                                              "residential",
+                                                              "project"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  2,
+                                             "section":  "Project Gallery",
+                                             "summary":  "Exterior imagery and first visual impression of Bramhand One.",
+                                             "keywords":  [
+                                                              "gallery",
+                                                              "exterior",
+                                                              "images",
+                                                              "visual",
+                                                              "building",
+                                                              "project gallery"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  3,
+                                             "section":  "Residences",
+                                             "summary":  "Spacious 1 BHK and 2 BHK homes, premium finishes, family living, inventory and project scale.",
+                                             "keywords":  [
+                                                              "residences",
+                                                              "homes",
+                                                              "family",
+                                                              "premium finishes",
+                                                              "space",
+                                                              "1 bhk",
+                                                              "2 bhk",
+                                                              "inventory"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  4,
+                                             "section":  "Home Design",
+                                             "summary":  "Vastu-aligned planning, modern comfort, ventilation, privacy, living experience.",
+                                             "keywords":  [
+                                                              "home design",
+                                                              "vastu",
+                                                              "comfort",
+                                                              "ventilation",
+                                                              "privacy",
+                                                              "1 bhk",
+                                                              "2 bhk",
+                                                              "planning"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  5,
+                                             "section":  "Lifestyle Amenities",
+                                             "summary":  "Walking paths, green spaces, recreation, children, family-friendly lifestyle.",
+                                             "keywords":  [
+                                                              "amenities",
+                                                              "walking path",
+                                                              "green spaces",
+                                                              "recreation",
+                                                              "children",
+                                                              "family",
+                                                              "lifestyle"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  6,
+                                             "section":  "Location Advantage",
+                                             "summary":  "Dhayari location, green surroundings, Sinhagad Road, city access and peaceful living.",
+                                             "keywords":  [
+                                                              "location",
+                                                              "dhayari",
+                                                              "sinhagad road",
+                                                              "green surroundings",
+                                                              "peaceful",
+                                                              "city access"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  7,
+                                             "section":  "Amenities Layout",
+                                             "summary":  "Site plan, amenity layout, open spaces and project-level amenity placement.",
+                                             "keywords":  [
+                                                              "amenities layout",
+                                                              "site plan",
+                                                              "amenity layout",
+                                                              "open spaces",
+                                                              "project layout",
+                                                              "amenities",
+                                                              "layout"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  8,
+                                             "section":  "Terrace Amenities",
+                                             "summary":  "Terrace amenities, open gym, jogging track, meditation, gazebo, seating and leisure.",
+                                             "keywords":  [
+                                                              "terrace",
+                                                              "amenities",
+                                                              "open gym",
+                                                              "jogging track",
+                                                              "meditation",
+                                                              "gazebo",
+                                                              "seating",
+                                                              "leisure",
+                                                              "health"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  9,
+                                             "section":  "Location Map",
+                                             "summary":  "Map, roads, nearby landmarks, schools, societies and project approach.",
+                                             "keywords":  [
+                                                              "map",
+                                                              "location map",
+                                                              "landmarks",
+                                                              "school",
+                                                              "society",
+                                                              "road",
+                                                              "approach",
+                                                              "nearby"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  10,
+                                             "section":  "Flat Options",
+                                             "summary":  "1 BHK and 2 BHK options, unit mix, flat choices and home configurations.",
+                                             "keywords":  [
+                                                              "flat options",
+                                                              "1 bhk",
+                                                              "2 bhk",
+                                                              "configuration",
+                                                              "unit mix",
+                                                              "flat type"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  11,
+                                             "section":  "Area Statement",
+                                             "summary":  "Carpet area, balcony, dry balcony, enclosed balcony and total carpet details.",
+                                             "keywords":  [
+                                                              "area statement",
+                                                              "carpet area",
+                                                              "balcony",
+                                                              "dry balcony",
+                                                              "enclosed balcony",
+                                                              "total carpet",
+                                                              "sq ft"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  12,
+                                             "section":  "Unit Plans",
+                                             "summary":  "1 BHK and 2 BHK layout plans, room arrangement and area statement.",
+                                             "keywords":  [
+                                                              "unit plans",
+                                                              "floor plan",
+                                                              "layout",
+                                                              "1 bhk layout",
+                                                              "2 bhk layout",
+                                                              "room plan"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  13,
+                                             "section":  "Planning Notes",
+                                             "summary":  "Technical planning page, drawings, layout references and plan notes.",
+                                             "keywords":  [
+                                                              "planning notes",
+                                                              "technical drawing",
+                                                              "layout reference",
+                                                              "plan notes"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  14,
+                                             "section":  "Project Highlights",
+                                             "summary":  "Project scale, exclusive inventory, green spaces, practical highlights and value points.",
+                                             "keywords":  [
+                                                              "project highlights",
+                                                              "green spaces",
+                                                              "exclusive",
+                                                              "48",
+                                                              "inventory",
+                                                              "project scale"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  15,
+                                             "section":  "Why Bramhand One",
+                                             "summary":  "Reasons to choose the project, family safety, schools, children spaces and community living.",
+                                             "keywords":  [
+                                                              "why choose",
+                                                              "family",
+                                                              "safety",
+                                                              "schools",
+                                                              "children",
+                                                              "community",
+                                                              "advantages"
+                                                          ]
+                                         },
+                                         {
+                                             "page":  16,
+                                             "section":  "Developer and RERA",
+                                             "summary":  "Developer, strategic partner, project details, MahaRERA number PR1260002600301 and QR.",
+                                             "keywords":  [
+                                                              "developer",
+                                                              "swamisamarth",
+                                                              "maitreya",
+                                                              "rera",
+                                                              "maharera",
+                                                              "registration",
+                                                              "qr",
+                                                              "pr1260002600301",
+                                                              "project details"
+                                                          ]
+                                         }
+                                     ]
+                 }
+}

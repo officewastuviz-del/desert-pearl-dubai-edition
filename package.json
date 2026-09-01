@@ -1,0 +1,9 @@
+{
+  "name": "desert-pearl-live-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/prepare-sites-build.mjs"
+  }
+}
