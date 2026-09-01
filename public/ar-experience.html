@@ -2,25 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="theme-color" content="#101513">
-  <meta name="description" content="Image-led augmented reality property preview">
-  <title>AR Preview | Desert Pearl Residences</title>
+  <meta name="description" content="Full-screen augmented reality property simulation">
+  <title>AR Experience | Desert Pearl Residences</title>
   <link rel="icon" type="image/svg+xml" href="media/images/property-logo.svg">
-  <link rel="stylesheet" href="ar-preview.css?v=2.0.0">
+  <link rel="stylesheet" href="ar-preview.css?v=3.0.0">
   <link rel="stylesheet" href="ambient-audio.css?v=1.0.0">
   <script src="config/property-config.js"></script>
-  <script src="ar-preview.js?v=2.0.0" defer></script>
+  <script src="ar-preview.js?v=3.0.0" defer></script>
   <script src="ambient-audio.js?v=1.0.0" defer></script>
 </head>
-<body class="ar-page">
+<body class="ar-page" data-ar-page>
   <main class="ar-shell">
-    <div class="ar-backdrop"><img src="media/images/dubai/02-exterior-arrival-blue-hour.png" alt="Luxury property arrival at blue hour"></div><div class="ar-grain"></div>
+    <video class="ar-fullscreen-video" data-ar-video src="media/video/desert-pearl-ar-preview.mp4" poster="media/images/dubai/ar-video-cover.jpg" muted loop playsinline preload="metadata" aria-label="Desert Pearl augmented reality building placement simulation"></video>
+    <div class="ar-video-shade"></div><div class="ar-grain"></div>
     <header class="ar-header"><a class="property-brand" href="experience.html"><img data-property-logo src="media/images/property-logo.svg" alt=""><span><strong data-property-name>Desert Pearl Residences</strong><small data-property-location>Dubai, United Arab Emirates</small></span></a><a class="back-link" href="experience.html">Back to experience</a></header>
-    <section class="ar-layout">
-      <div class="ar-copy"><p class="eyebrow">Augmented reality preview</p><h1>Place the vision<br><em>in your world.</em></h1><p class="intro">See Desert Pearl appear at architectural scale within a real environment—an intuitive preview of form, landscape and waterfront presence.</p><div class="ar-actions"><button class="button primary" type="button" data-place-trigger><span>Simulate placement</span><i>◎</i></button><a class="button" href="tour-360.html"><span>Explore 360° preview</span><i>↗</i></a></div><p class="asset-note"><i></i>Interactive AR visualisation · presentation mode</p></div>
-      <div class="device-stage"><div class="device-glow"></div><div class="phone" data-phone><div class="phone-screen"><video data-ar-video src="media/video/desert-pearl-ar-preview.mp4" poster="media/images/dubai/ar-video-cover.jpg" muted loop playsinline preload="metadata" aria-label="Desert Pearl augmented reality placement video"></video><div class="camera-ui"></div><div class="plane-grid"></div><div class="ar-reticle"></div><div class="ar-video-caption"><small>DESERT PEARL · LIVE AR</small><strong>Explore the landmark in your space</strong></div><span class="placement-label" data-placement-label>FINDING A SURFACE</span></div></div></div>
+
+    <section class="ar-content">
+      <div class="ar-copy" data-ar-copy><p class="eyebrow">Full-screen augmented reality</p><h1>Place the vision<br><em>in your world.</em></h1><p class="intro">See Desert Pearl appear at architectural scale within a real waterfront setting—an intuitive preview of form, landscape and presence.</p><div class="ar-actions"><button class="button primary" type="button" data-place-trigger><span>Simulate AR</span><i>◎</i></button><a class="button" href="tour-360.html"><span>Explore 360° tour</span><i>↗</i></a></div><p class="asset-note"><i></i><span data-placement-label>AR simulation ready</span></p></div>
     </section>
+
+    <div class="ar-video-caption" aria-label="Desert Pearl augmented reality description"><small>DESERT PEARL · LIVE AR</small><strong>Experience the waterfront landmark at architectural scale.</strong></div>
     <div class="steps" aria-label="AR journey"><span><b>01</b>Scan your space</span><span><b>02</b>Place the property</span><span><b>03</b>Explore every angle</span></div>
   </main>
 </body>
