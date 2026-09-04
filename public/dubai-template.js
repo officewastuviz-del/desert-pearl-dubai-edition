@@ -160,20 +160,71 @@
     three: {title: "Three Bedroom", copy: "An expansive corner residence with private arrival, panoramic glazing and a dedicated dining salon.", image: "media/images/dubai/12-luxury-private-dining-evening.png", area: "218 m²", rooms: "3", outlook: "Panoramic"}
   };
   const residenceSelector = document.querySelector("[data-residence-selector]");
-  residenceSelector?.querySelectorAll("[data-residence]").forEach((button) => button.addEventListener("click", () => {
+  const residenceImages = new Map();
+  const loadResidenceImage = (item) => {
+    if (!residenceImages.has(item.image)) {
+      const image = new Image();
+      const ready = new Promise((resolve, reject) => {
+        image.onload = async () => {
+          try {
+            if (image.decode) await image.decode();
+            resolve(image);
+          } catch (error) { reject(error); }
+        };
+        image.onerror = () => reject(new Error("Residence image could not be loaded"));
+        image.src = item.image;
+      });
+      residenceImages.set(item.image, ready);
+      ready.catch(() => residenceImages.delete(item.image));
+    }
+    return residenceImages.get(item.image);
+  };
+  let residenceRequest = 0;
+  if (residenceSelector) {
+    Object.values(residenceData).forEach((item) => loadResidenceImage(item).catch(() => {}));
+    residenceSelector.querySelectorAll("[data-residence]").forEach((tab) => {
+      tab.setAttribute("aria-pressed", String(tab.classList.contains("is-active")));
+    });
+  }
+  residenceSelector?.querySelectorAll("[data-residence]").forEach((button) => button.addEventListener("click", async () => {
     const item = residenceData[button.dataset.residence];
     if (!item) return;
+    const request = ++residenceRequest;
+    residenceSelector.querySelector("[data-residence-error]")?.remove();
+    residenceSelector.setAttribute("aria-busy", "true");
     residenceSelector.classList.add("is-changing");
-    residenceSelector.querySelectorAll("[data-residence]").forEach((tab) => tab.classList.toggle("is-active", tab === button));
-    window.setTimeout(() => {
+    try {
+      const [image] = await Promise.all([
+        loadResidenceImage(item),
+        new Promise((resolve) => window.setTimeout(resolve, reducedMotion ? 0 : 220))
+      ]);
+      // Commit only the latest selection, once its image is loaded and decoded.
+      if (request !== residenceRequest) return;
+      image.setAttribute("data-residence-image", "");
+      image.alt = `${item.title} residence at Desert Pearl`;
+      residenceSelector.querySelector("[data-residence-image]").replaceWith(image);
       residenceSelector.querySelector("[data-residence-title]").textContent = item.title;
       residenceSelector.querySelector("[data-residence-copy]").textContent = item.copy;
-      residenceSelector.querySelector("[data-residence-image]").src = item.image;
       residenceSelector.querySelector("[data-spec-area]").textContent = item.area;
       residenceSelector.querySelector("[data-spec-rooms]").textContent = item.rooms;
       residenceSelector.querySelector("[data-spec-view]").textContent = item.outlook;
-      residenceSelector.classList.remove("is-changing");
-    }, 220);
+      residenceSelector.querySelectorAll("[data-residence]").forEach((tab) => {
+        tab.classList.toggle("is-active", tab === button);
+        tab.setAttribute("aria-pressed", String(tab === button));
+      });
+    } catch {
+      if (request !== residenceRequest) return;
+      const status = document.createElement("p");
+      status.setAttribute("data-residence-error", "");
+      status.setAttribute("role", "status");
+      status.textContent = "This residence image could not load. Please select it again to retry.";
+      residenceSelector.querySelector(".selector-tabs").after(status);
+    } finally {
+      if (request === residenceRequest) {
+        residenceSelector.classList.remove("is-changing");
+        residenceSelector.setAttribute("aria-busy", "false");
+      }
+    }
   }));
 
   const amenityData = {

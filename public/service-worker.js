@@ -1,6 +1,6 @@
 "use strict";
 
-const CACHE_VERSION = "dubai-edition-property-shell-v8";
+const CACHE_VERSION = "dubai-edition-property-shell-v9";
 const CORE_ASSETS = [
   "./index.html",
   "./vision.html",
@@ -9,7 +9,7 @@ const CORE_ASSETS = [
   "./gallery.html",
   "./experience.html",
   "./dubai-theme.css?v=2.1.0",
-  "./dubai-template.js?v=2.1.0",
+  "./dubai-template.js?v=2.1.1",
   "./ambient-audio.css?v=1.0.0",
   "./ambient-audio.js?v=1.0.0",
   "./tour-360.html",
