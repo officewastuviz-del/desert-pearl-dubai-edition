@@ -233,21 +233,73 @@
     lounge: {title: "Sky Lounge", copy: "An intimate residents-only salon above the city, designed for effortless evening gatherings.", image: "media/images/dubai/04-amenity-sky-lounge-blue-hour.png"}
   };
   const amenitySwitcher = document.querySelector("[data-amenity-switcher]");
-  amenitySwitcher?.querySelectorAll("[data-amenity]").forEach((button) => button.addEventListener("click", () => {
+  const amenityImages = new Map();
+  const loadAmenityImage = (item) => {
+    if (!amenityImages.has(item.image)) {
+      const image = new Image();
+      const ready = new Promise((resolve, reject) => {
+        image.onload = async () => {
+          try {
+            if (image.decode) await image.decode();
+            resolve(image);
+          } catch (error) { reject(error); }
+        };
+        image.onerror = () => reject(new Error("Amenity image could not be loaded"));
+        image.src = item.image;
+      });
+      amenityImages.set(item.image, ready);
+      ready.catch(() => amenityImages.delete(item.image));
+    }
+    return amenityImages.get(item.image);
+  };
+  const updateAmenityTabs = (key) => {
+    document.querySelectorAll("[data-amenity]").forEach((tab) => {
+      const active = tab.dataset.amenity === key;
+      tab.classList.toggle("is-active", active);
+      tab.setAttribute("aria-pressed", String(active));
+    });
+  };
+  let amenityRequest = 0;
+  if (amenitySwitcher) {
+    Object.values(amenityData).forEach((item) => loadAmenityImage(item).catch(() => {}));
+    updateAmenityTabs("pool");
+  }
+  amenitySwitcher?.querySelectorAll("[data-amenity]").forEach((button) => button.addEventListener("click", async () => {
     const item = amenityData[button.dataset.amenity];
     if (!item) return;
+    const request = ++amenityRequest;
+    amenitySwitcher.querySelector("[data-amenity-error]")?.remove();
+    amenitySwitcher.setAttribute("aria-busy", "true");
     amenitySwitcher.classList.add("is-changing");
-    amenitySwitcher.querySelectorAll("[data-amenity]").forEach((tab) => tab.classList.toggle("is-active", tab === button));
-    window.setTimeout(() => {
+    try {
+      const [image] = await Promise.all([
+        loadAmenityImage(item),
+        new Promise((resolve) => window.setTimeout(resolve, reducedMotion ? 0 : 220))
+      ]);
+      // Keep the visual, copy and both sets of controls on the latest loaded choice.
+      if (request !== amenityRequest) return;
+      image.setAttribute("data-amenity-image", "");
+      image.alt = `${item.title} at Desert Pearl`;
+      amenitySwitcher.querySelector("[data-amenity-image]").replaceWith(image);
       amenitySwitcher.querySelector("[data-amenity-title]").textContent = item.title;
       amenitySwitcher.querySelector("[data-amenity-copy]").textContent = item.copy;
-      amenitySwitcher.querySelector("[data-amenity-image]").src = item.image;
-      amenitySwitcher.classList.remove("is-changing");
-    }, 220);
+      updateAmenityTabs(button.dataset.amenity);
+    } catch {
+      if (request !== amenityRequest) return;
+      const status = document.createElement("p");
+      status.setAttribute("data-amenity-error", "");
+      status.setAttribute("role", "status");
+      status.textContent = "This amenity image could not load. Please select it again to retry.";
+      amenitySwitcher.querySelector(".selector-tabs").after(status);
+    } finally {
+      if (request === amenityRequest) {
+        amenitySwitcher.classList.remove("is-changing");
+        amenitySwitcher.setAttribute("aria-busy", "false");
+      }
+    }
   }));
   document.querySelectorAll(".time-tabs [data-amenity]").forEach((button) => button.addEventListener("click", () => {
     amenitySwitcher?.querySelector(`[data-amenity="${button.dataset.amenity}"]`)?.click();
-    document.querySelectorAll(".time-tabs [data-amenity]").forEach((tab) => tab.classList.toggle("is-active", tab === button));
     amenitySwitcher?.scrollIntoView({behavior: reducedMotion ? "auto" : "smooth", block: "center"});
   }));
 
